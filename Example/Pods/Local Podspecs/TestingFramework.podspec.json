@@ -1,0 +1,22 @@
+{
+  "name": "TestingFramework",
+  "version": "0.1.0",
+  "summary": "A short description of TestingFramework.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/praza24/TestingFramework",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "praza24": "prasathsrithar@hotmail.co.uk"
+  },
+  "source": {
+    "git": "https://github.com/praza24/TestingFramework.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TestingFramework/Classes/**/*"
+}
