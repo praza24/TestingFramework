@@ -12,6 +12,7 @@
 		8411C6D9D68173CB19BF3E60B7893A2B /* Pods-TestingFramework_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EE8DAE6775B0F03D6000CD45772430 /* Pods-TestingFramework_Tests-dummy.m */; };
 		84EB9406182E1DFC8F5ED6CF7A219EE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		8B2A76F7AD1CF552F11608C0CF105FEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		AEE5C4E2248DA59300820E7A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5C4E1248DA59300820E7A /* Service.swift */; };
 		B6B6292EC8A8C394FA47C80E60201159 /* TestingFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1A46E030E043E892944BDE2A47A9D9 /* TestingFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD45AB3E1613E347FC15FF00A6A63756 /* Pods-TestingFramework_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0331D5669589079BE51A205C89EE7B32 /* Pods-TestingFramework_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3E04DF39B8AC340BB80EC3603DD07E6 /* TestingFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F7A8724F9F2402545936DC415DA90 /* TestingFramework-dummy.m */; };
@@ -59,6 +60,7 @@
 		99453746A0798A3BE5D831AB26ED0429 /* Pods-TestingFramework_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestingFramework_Example.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A810D7B64F6257216A3803524478A5A9 /* TestingFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TestingFramework-prefix.pch"; sourceTree = "<group>"; };
+		AEE5C4E1248DA59300820E7A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AFCC2D97DB45DCB64B441405961B4CDC /* Pods-TestingFramework_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestingFramework_Tests.modulemap"; sourceTree = "<group>"; };
 		C6F6A070BF2F9520967206308C787587 /* Pods-TestingFramework_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestingFramework_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C9851025B3FFAF3121115A38A35A56EC /* Pods-TestingFramework_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestingFramework_Example-dummy.m"; sourceTree = "<group>"; };
@@ -184,11 +186,20 @@
 		ACDC257BE23DE910EE88E76745F4960E /* TestingFramework */ = {
 			isa = PBXGroup;
 			children = (
+				AEE5C4E0248DA54E00820E7A /* Sources */,
 				9A64F933EBC76DA26DA72DA118D43276 /* Pod */,
 				95820EA233BBB30A32667FE33B04853F /* Support Files */,
 			);
 			name = TestingFramework;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		AEE5C4E0248DA54E00820E7A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AEE5C4E1248DA59300820E7A /* Service.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -312,6 +323,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					A98D3E32699BAC5695DCF12B5CA5D231 = {
+						LastSwiftMigration = 1150;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -379,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3E04DF39B8AC340BB80EC3603DD07E6 /* TestingFramework-dummy.m in Sources */,
+				AEE5C4E2248DA59300820E7A /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +433,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TestingFramework_Tests/Pods-TestingFramework_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TestingFramework_Tests/Pods-TestingFramework_Tests.modulemap";
@@ -438,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF04173881EFF85698B93E876AF6FE1A /* TestingFramework.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -450,7 +468,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TestingFramework/TestingFramework-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TestingFramework/TestingFramework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TestingFramework/TestingFramework.modulemap";
 				PRODUCT_MODULE_NAME = TestingFramework;
@@ -458,6 +476,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -481,7 +500,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TestingFramework_Example/Pods-TestingFramework_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TestingFramework_Example/Pods-TestingFramework_Example.modulemap";
@@ -515,7 +534,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TestingFramework_Tests/Pods-TestingFramework_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TestingFramework_Tests/Pods-TestingFramework_Tests.modulemap";
@@ -580,7 +599,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -659,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF04173881EFF85698B93E876AF6FE1A /* TestingFramework.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -671,7 +691,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TestingFramework/TestingFramework-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TestingFramework/TestingFramework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TestingFramework/TestingFramework.modulemap";
 				PRODUCT_MODULE_NAME = TestingFramework;
@@ -703,7 +723,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TestingFramework_Example/Pods-TestingFramework_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TestingFramework_Example/Pods-TestingFramework_Example.modulemap";
